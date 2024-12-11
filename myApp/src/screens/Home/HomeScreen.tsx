@@ -1,21 +1,28 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 
 export default function HomeScreen() {
+    const navigation = useNavigation()
   return (
     <View style={styles.container}>
       {/* Icône principale */}
   
 
       {/* Boutons */}
-      <TouchableOpacity style={styles.createButton}>
+      <TouchableOpacity style={styles.createButton} onPress={() => navigation.navigate('AddTeam' as never)}>
         <Text style={styles.createButtonText}>Create a team</Text>
       </TouchableOpacity>
       <Text style={styles.orText}>or</Text>
       <TouchableOpacity style={styles.joinButton}>
         <Text style={styles.joinButtonText}>Join a team</Text>
       </TouchableOpacity>
+      <Text style={styles.orText}>or</Text>
+      <TouchableOpacity style={styles.viewEventButton}onPress={() => navigation.navigate('AddEvent' as never)}>
+        <Text style={styles.joinButtonText}>View Event</Text>
+      </TouchableOpacity>
     </View>
+    
   );
 }
 
@@ -59,4 +66,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
   },
+  viewEventButton: {
+    backgroundColor: '#5AC8FA',
+    paddingVertical: 15,
+    paddingHorizontal: 40,
+    borderRadius: 30,
+  },
+  
 });
