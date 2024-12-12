@@ -8,10 +8,7 @@ export default function HomeScreen() {
   return (
     <View style={styles.container}>
       {/* Icône principale */}
-      <Image
-        style={styles.icon}
-        source={require('myApp\assets\favicon.png')} // Remplace par ton chemin
-      />
+
 
       {/* Boutons */}
       <TouchableOpacity

@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const ForgotPasswordScreen = () => {
+const NotificationSettingsScreen = () => {
   return (
     <View>
-      <Text>ForgotPasswordScreen</Text>
+      <Text>NotificationSettingsScreen</Text>
     </View>
   )
 }
 
-export default ForgotPasswordScreen
+export default NotificationSettingsScreen
 
 const styles = StyleSheet.create({})
