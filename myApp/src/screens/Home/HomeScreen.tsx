@@ -45,13 +45,34 @@ export default function HomeScreen() {
       <Text style={styles.orText}>or</Text>
 
       <TouchableOpacity
-        style={styles.addEventButton}
+        style={styles.viewEventButton}
         onPress={() => navigation.navigate('EventDetails' as never)}
         accessibilityLabel="View or add an event"
         accessible={true}
       >
         <Text style={styles.joinButtonText}>View Event</Text>
       </TouchableOpacity>
+      <Text style={styles.orText}>or</Text>
+
+      <TouchableOpacity
+        style={styles.notifButton}
+        onPress={() => navigation.navigate('Notifications' as never)}
+        accessibilityLabel="View notifications"
+        accessible={true}
+      >
+        <Text style={styles.joinButtonText}>Notification</Text>
+      </TouchableOpacity>
+
+      <Text style={styles.orText}>or</Text>
+
+<TouchableOpacity
+  style={styles.dashboardButton}
+  onPress={() => navigation.navigate('Dashboard' as never)}
+  accessibilityLabel="View dashboard"
+  accessible={true}
+>
+  <Text style={styles.joinButtonText}>Dashboard</Text>
+</TouchableOpacity>
     </View>
   );
 }
@@ -97,6 +118,24 @@ const styles = StyleSheet.create({
   },
   addEventButton: {
     backgroundColor: '#5AC8FA',
+    paddingVertical: 15,
+    paddingHorizontal: 40,
+    borderRadius: 30,
+  },
+  viewEventButton: {
+    backgroundColor: '#24A148',
+    paddingVertical: 15,
+    paddingHorizontal: 40,
+    borderRadius: 30,
+  },
+  notifButton: {
+    backgroundColor: '#1E90FF',
+    paddingVertical: 15,
+    paddingHorizontal: 40,
+    borderRadius: 30,
+  },
+  dashboardButton: {
+    backgroundColor: '#e74c3c',
     paddingVertical: 15,
     paddingHorizontal: 40,
     borderRadius: 30,
