@@ -15,6 +15,69 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="GetStarted">
+
+        <Stack.Screen
+        name="ForgotPassword"
+        component={ForgotPasswordScreen}
+        options={{ title: 'Forgot Password' }}
+        />
+        <Stack.Screen
+        name="SignIn"
+        component={SignInScreen}
+        options={{ title: 'Sign In' }}
+        />
+        <Stack.Screen
+        name="SignUp"
+        component={SignUpScreen}
+        options={{ title: 'Sign Up' }}
+        />
+        <Stack.Screen
+        name="BucketlitsDetails"
+        component={BucketlistsDetailsScreen}
+        options={{ title: 'Bucketlists Details' }}
+        />
+        <Stack.Screen
+        name="Calendar"
+        component={CalendarScreen}
+        options={{ title: 'Calendar' }}
+        />
+        <Stack.Screen
+        name="CalendarDetails"
+        component={CalendarDetailsScreen}
+        options={{ title: 'Calendar Details' }}
+        />
+        <Stack.Screen
+        name="Dashboard"
+        component={DashboardScreen}
+        options={{ title: 'Dashboard' }}
+        />
+        <Stack.Screen
+        name="EditEvent"
+        component={EditEventScreen}
+        options={{ title: 'Edit Event' }}
+        />
+        <Stack.Screen
+        name="Notifications"
+        component={NotificationsScreen}
+        options={{ title: 'Notifications' }}
+        />
+        <Stack.Screen
+        name="NotificationsSettings"
+        component={NotificationsSettingsScreen}
+        options={{ title: 'Notifications Settings' }}
+        />
+        <Stack.Screen
+        name="Profile"
+       component={UserProfileScreen}
+       options={{ title: 'Profile' }}
+       />
+       <Stack.Screen
+       name="Settings"
+       component={GeneralSettingsScreen}
+       options={{ title: 'Settings' }}
+       />
+
+
         {/* Écran "Get Started" */}
         <Stack.Screen
           name="GetStarted"
@@ -52,9 +115,9 @@ export default function App() {
           options={{ title: 'Add Event' }}
 />
 <Stack.Screen
-        name="EventDetails"
-        component={EventDetailsScreen}
-         options={{ title: 'Event Details' }}
+          name="EventDetails"
+          component={EventDetailsScreen}
+          options={{ title: 'Event Details' }}
 />
 
       </Stack.Navigator>
