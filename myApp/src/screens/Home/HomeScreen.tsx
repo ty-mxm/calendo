@@ -3,33 +3,50 @@ import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 
 export default function HomeScreen() {
-    const navigation = useNavigation()
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
       {/* Icône principale */}
-  
+      <Image
+        style={styles.icon}
+        source={require('myApp\assets\favicon.png')} // Remplace par ton chemin
+      />
 
       {/* Boutons */}
-      <TouchableOpacity style={styles.createButton} onPress={() => navigation.navigate('AddTeam' as never)}>
+      <TouchableOpacity
+        style={styles.createButton}
+        onPress={() => navigation.navigate('AddTeam' as never)}
+        accessibilityLabel="Create a new team"
+        accessible={true}
+      >
         <Text style={styles.createButtonText}>Create a team</Text>
       </TouchableOpacity>
+
       <Text style={styles.orText}>or</Text>
-      <TouchableOpacity style={styles.joinButton}>
+
+      <TouchableOpacity
+        style={styles.joinButton}
+        onPress={() => navigation.navigate('JoinTeam' as never)}
+        accessibilityLabel="Join an existing team"
+        accessible={true}
+      >
         <Text style={styles.joinButtonText}>Join a team</Text>
       </TouchableOpacity>
+
       <Text style={styles.orText}>or</Text>
-      <TouchableOpacity style={styles.addEventButton}onPress={() => navigation.navigate('AddEvent' as never)}>
-        <Text style={styles.joinButtonText}>Add Event</Text>
-      </TouchableOpacity>
-      <Text style={styles.orText}>or</Text>
-      <TouchableOpacity style={styles.viewEventButton}onPress={() => navigation.navigate('EventDetails' as never)}>
+
+      <TouchableOpacity
+        style={styles.addEventButton}
+        onPress={() => navigation.navigate('AddEvent' as never)}
+        accessibilityLabel="View or add an event"
+        accessible={true}
+      >
         <Text style={styles.joinButtonText}>View Event</Text>
       </TouchableOpacity>
     </View>
-    
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -76,11 +93,4 @@ const styles = StyleSheet.create({
     paddingHorizontal: 40,
     borderRadius: 30,
   },
-  viewEventButton: {
-    backgroundColor: '#398AF7',
-    paddingVertical: 15,
-    paddingHorizontal: 40,
-    borderRadius: 30,
-  },
-  
 });
