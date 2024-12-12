@@ -18,7 +18,11 @@ export default function HomeScreen() {
         <Text style={styles.joinButtonText}>Join a team</Text>
       </TouchableOpacity>
       <Text style={styles.orText}>or</Text>
-      <TouchableOpacity style={styles.viewEventButton}onPress={() => navigation.navigate('AddEvent' as never)}>
+      <TouchableOpacity style={styles.addEventButton}onPress={() => navigation.navigate('AddEvent' as never)}>
+        <Text style={styles.joinButtonText}>Add Event</Text>
+      </TouchableOpacity>
+      <Text style={styles.orText}>or</Text>
+      <TouchableOpacity style={styles.viewEventButton}onPress={() => navigation.navigate('EventDetails' as never)}>
         <Text style={styles.joinButtonText}>View Event</Text>
       </TouchableOpacity>
     </View>
@@ -66,8 +70,14 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
   },
-  viewEventButton: {
+  addEventButton: {
     backgroundColor: '#5AC8FA',
+    paddingVertical: 15,
+    paddingHorizontal: 40,
+    borderRadius: 30,
+  },
+  viewEventButton: {
+    backgroundColor: '#398AF7',
     paddingVertical: 15,
     paddingHorizontal: 40,
     borderRadius: 30,
