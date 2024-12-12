@@ -39,6 +39,17 @@ export default function HomeScreen() {
         accessibilityLabel="View or add an event"
         accessible={true}
       >
+        <Text style={styles.joinButtonText}>Add Event</Text>
+      </TouchableOpacity>
+      
+      <Text style={styles.orText}>or</Text>
+
+      <TouchableOpacity
+        style={styles.addEventButton}
+        onPress={() => navigation.navigate('EventDetails' as never)}
+        accessibilityLabel="View or add an event"
+        accessible={true}
+      >
         <Text style={styles.joinButtonText}>View Event</Text>
       </TouchableOpacity>
     </View>
