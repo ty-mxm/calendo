@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, FlatList } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 export default function TeamDetailsScreen() {
   const [memberName, setMemberName] = useState('');
   const [members, setMembers] = useState(['Isabel Krins', 'Yanis Yacini', 'Ty Mamm']);
+    const navigation = useNavigation();
 
   const addMember = () => {
     if (memberName.trim()) {
@@ -43,14 +45,18 @@ export default function TeamDetailsScreen() {
           </View>
         )}
       />
-
-      <TouchableOpacity style={styles.confirmButton}>
+      <TouchableOpacity
+        style={styles.confirmButton}
+        onPress={() => {
+          
+          navigation.goBack(); 
+        }}
+      >
         <Text style={styles.confirmButtonText}>Confirmed</Text>
       </TouchableOpacity>
     </View>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,

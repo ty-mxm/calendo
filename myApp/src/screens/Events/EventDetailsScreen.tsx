@@ -14,7 +14,7 @@ export default function EventDetailsScreen() {
       <View style={styles.descriptionContainer}>
         <Text style={styles.sectionTitle}>Details</Text>
         <Text style={styles.description}>
-          Lorem hdas fjkhfadknmm iujafaknfadi afsdmaf dasjfkasd ghga
+          Meet directly  at the restaurant.
         </Text>
       </View>
 

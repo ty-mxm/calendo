@@ -20,16 +20,34 @@ export default function AddTeamScreen() {
       <TouchableOpacity
         style={styles.createButton}
         onPress={() => {
-          // Ajouter l'équipe ici
-          navigation.goBack(); // Retour à l'écran précédent
+         
+          navigation.navigate('GetStarted' as never);
         }}
       >
         <Text style={styles.createButtonText}>Create a team</Text>
       </TouchableOpacity>
+       <TouchableOpacity
+           style={styles.teamDetailsButton}
+           onPress={() => navigation.navigate('TeamDetails' as never)}
+           accessibilityLabel="View team details"
+           accessible={true}
+         >
+      <Text style={styles.createButtonText}>Teams details</Text>
+       </TouchableOpacity>
+
+
+       <TouchableOpacity
+           style={styles.teamsButton}
+           onPress={() => navigation.navigate('Teams' as never)}
+           accessibilityLabel="View team details"
+           accessible={true}
+         >
+      <Text style={styles.createButtonText}>View Teams </Text>
+       </TouchableOpacity>
+       
     </View>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -60,5 +78,17 @@ const styles = StyleSheet.create({
     color: '#FFF',
     fontSize: 16,
     textAlign: 'center',
+  },
+  teamDetailsButton: {
+    backgroundColor: '#5AC8FA',
+    paddingVertical: 15,
+    paddingHorizontal: 40,
+    borderRadius: 30,
+  },
+  teamsButton: {
+    backgroundColor: '#4db6ac',
+    paddingVertical: 15,
+    paddingHorizontal: 40,
+    borderRadius: 30,
   },
 });
